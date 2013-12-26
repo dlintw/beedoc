@@ -81,6 +81,7 @@ myproject
 我们在开发 Go 项目的时候最大的问题是经常需要自己手动去编译再运行，`bee run` 命令是监控 beego 的项目，通过 inotify 监控文件系统。这样我们在开发过程中就可以实时的看到项目修改之后的效果：
 
 ```
+cd /gopath/src/myproject 
 bee run
 13-11-25 09:53:04 [INFO] Uses 'myproject' as 'appname'
 13-11-25 09:53:04 [INFO] Initializing watcher...
@@ -149,6 +150,7 @@ apiproject
 这是基于 `go test` 进行封装的一个命令，执行 beego 项目 test 目录下的测试用例：
 
 ```
+cd /gopath/src/apiproject
 bee test apiproject
 13-11-25 10:46:57 [INFO] Initializing watcher...
 13-11-25 10:46:57 [TRAC] Directory(/gopath/src/apiproject/controllers)
@@ -171,6 +173,7 @@ ok  	apiproject/tests	0.100s
 `pack` 目录用来发布应用的时候打包，会把项目打包成 zip 包，这样我们部署的时候直接打包之后的项目上传，解压就可以部署了：
 
 ```
+cd /gopath/src/apiproject
 bee pack
 app path: /gopath/src/apiproject
 GOOS darwin GOARCH amd64
